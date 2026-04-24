@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slide-container dark">
+    <div class="circle-bg"></div><div class="pattern"></div>
+    <div class="logo-mark">CI</div>
+    <div class="kicker">Інженерний проєкт · 2026</div>
+    <h1>Система автоматичного<br/>розгортання ПЗ <span style="color:var(--green)">(CI/CD)</span><br/>для команди з 10 розробників</h1>
+    <div class="chip">Управління та бізнес-аналіз ІТ-проєктів</div>
+    <div class="title-meta">
+      <b>Виконавець:</b> Роговий Сергій<br/>
+      <b>Група:</b> КН-924б
+    </div>
+    <div class="institution">
+      НТУ «ХПІ»<br/>Харків · 2026
+    </div>
+  </div>
+
+ <div class="slide-container">
+  <div class="kicker">02 · Проблема</div>
+
+  <h2>
+    Релізи залежать від ручних дій —<br/>
+    це сповільнює бізнес
+  </h2>
+
+  <div class="problem-layout">
+
+    <!-- LEFT (KEY FACT) -->
+    <div class="problem-highlight">
+      <div class="big">20%</div>
+      <div class="desc">
+        часу розробників<br/>
+        не створює нову цінність
+      </div>
+    </div>
+
+    <!-- RIGHT (CARDS) -->
+    <div class="problem-list">
+
+      <div class="problem-item">
+        <h3>Рутина замість розробки</h3>
+        <p>до 20% часу команди йде на збірку, тестування та деплой</p>
+      </div>
+
+      <div class="problem-item">
+        <h3>Людський фактор</h3>
+        <p>ризик забути тести, обрати не той білд або середовище</p>
+      </div>
+
+      <div class="problem-item">
+        <h3>Нестабільні релізи</h3>
+        <p>помилки проявляються пізно та дорого виправляються</p>
+      </div>
+
+      <div class="problem-item">
+        <h3>Фінансові втрати</h3>
+        <p>простій сервісу = втрата грошей і довіри користувачів</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>CI/CD для команди з 10 розробників</span>
+    <span class="page">2 / 7</span>
+  </div>
+  </div>
+
+  <div class="slide-container">
+    <div class="kicker">03 · Бізнес-обґрунтування / ТЕО</div>
+    <h2>Автоматизація окупається через продуктивність<br/>і стабільність релізів</h2>
+    <div class="grid-3">
+      <div class="metric green"><div class="num">60%</div><div class="label">скорочення часу на ручні операції</div></div>
+      <div class="metric"><div class="num">~30%</div><div class="label">ROI після масштабування рішення</div></div>
+      <div class="metric"><div class="num">~1.3</div><div class="label">року орієнтовний термін окупності</div></div>
+    </div>
+    <div class="money-flow">
+      <div class="card">
+        <h3>Головна економічна логіка</h3>
+        <p>Менше ручного деплою → менше простоїв → більше часу на продуктову розробку та швидші релізи.</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar b1"><strong>20%</strong><label>поточні втрати часу</label></div>
+        <div class="bar b2"><strong>60%</strong><label>цільове скорочення рутини</label></div>
+        <div class="bar b3"><strong>30%</strong><label>ROI після масштабування</label></div>
+      </div>
+    </div>
+    <div class="footer"><span>Ключовий фокус: економія часу команди та зниження вартості помилок</span><span class="page">3 / 7</span></div>
+  </div>
+
+  <div class="slide-container">
+    <div class="kicker">04 · Архітектура та рішення</div>
+    <h2>Стандартизований pipeline: від commit до staging</h2>
+    <div class="pipeline">
+      <div class="pipe-step"><strong>Commit</strong><span>push / merge request<br/>у Git-репозиторій</span></div>
+      <div class="arrow"></div>
+      <div class="pipe-step"><strong>Build</strong><span>збірка артефакту<br/>у Docker-образ</span></div>
+      <div class="arrow"></div>
+      <div class="pipe-step"><strong>Test</strong><span>unit-тести та quality gates</span></div>
+      <div class="arrow"></div>
+      <div class="pipe-step"><strong>Deploy</strong><span>автоматичне розгортання на Staging</span></div>
+    </div>
+    <div class="grid-2" style="height:285px;margin-top:34px;grid-template-columns:.92fr 1.08fr;">
+      <div class="card">
+        <h3>Технічний стек</h3>
+        <div class="tech-row" style="flex-wrap:wrap;margin-top:16px">
+          <span class="tech">GitHub Actions</span><span class="tech">GitLab CI</span><span class="tech light">Docker</span><span class="tech light">Runners</span>
+        </div>
+      </div>
+      <div class="quote">Єдиний pipeline прибирає варіативність ручних дій і робить реліз передбачуваним.</div>
+    </div>
+    <div class="footer"><span>Рішення: автоматизація збірки, тестування, артефактів і staging-деплою</span><span class="page">4 / 7</span></div>
+  </div>
+
+  <div class="slide-container">
+    <div class="kicker">05 · План реалізації</div>
+    <h2>Scrum: короткі ітерації, швидкий інкремент,<br/>регулярний зворотний зв’язок</h2>
+    <div class="scrum">Методологія: <span>Scrum</span></div>
+    <div class="timeline">
+      <div class="phase">
+        <div class="dot"></div><div class="phase-title">1. Інфраструктура</div><div class="phase-text">репозиторії, доступи, runners, секрети, базова CI-конфігурація</div>
+      </div>
+      <div class="phase">
+        <div class="dot"></div><div class="phase-title">2. Unit-тести</div><div class="phase-text">автозапуск тестів, quality gates, контроль помилок на ранньому етапі</div>
+      </div>
+      <div class="phase">
+        <div class="dot"></div><div class="phase-title">3. Staging deploy</div><div class="phase-text">Docker-образи, артефакти, автоматичне розгортання у тестове середовище</div>
+      </div>
+      <div class="phase">
+        <div class="dot"></div><div class="phase-title">4. Сповіщення</div><div class="phase-text">Slack / Telegram / email про статус збірки, тестів і деплою</div>
+      </div>
+    </div>
+    <div class="footer"><span>План зосереджений на MVP pipeline, який команда може одразу використовувати</span><span class="page">5 / 7</span></div>
+  </div>
+
+  <div class="slide-container">
+    <div class="kicker">06 · Ключові ризики</div>
+    <h2>Керування ризиками: раннє виявлення<br/>і швидка реакція</h2>
+    <table class="risk-table">
+      <thead><tr><th>Ризик</th><th>Вплив</th><th>Мітигація</th></tr></thead>
+      <tbody>
+        <tr><td>Зміна вимог замовником</td><td><span class="tag h">Високий</span></td><td>Scrum, короткі спринти, регулярні демо та пріоритизація backlog</td></tr>
+        <tr><td>Технічні проблеми з API</td><td><span class="tag m">Середній</span></td><td>Створення «заглушок», контрактне тестування, ізоляція інтеграцій</td></tr>
+        <tr><td>Нестабільність runner-ів або staging</td><td><span class="tag m">Середній</span></td><td>Резервний runner, логування, health-checks, контроль ресурсів</td></tr>
+      </tbody>
+    </table>
+    <div class="grid-2" style="height:130px;margin-top:20px;grid-template-columns:1fr 1fr;">
+      <div class="card" style="padding:20px 24px;"><h3 style="margin-bottom:6px">Принцип</h3><p style="font-size:18px">Ризик має власника, тригер і план реагування.</p></div>
+      <div class="card" style="padding:20px 24px;"><h3 style="margin-bottom:6px">Фокус</h3><p style="font-size:18px">Не допустити блокування релізного потоку.</p></div>
+    </div>
+    <div class="footer"><span>Мітигація інтегрована у процес управління проєктом</span><span class="page">6 / 7</span></div>
+  </div>
+
+  <div class="slide-container dark">
+    <div class="circle-bg"></div>
+    <div class="kicker">07 · Підсумки</div>
+    <div class="grid-2" style="height:500px;grid-template-columns:1.05fr .95fr;">
+      <div>
+        <div class="summary-big">Швидше<br/><span>Time‑to‑Market</span><br/>стабільніші релізи</div>
+        <div class="accent-line" style="margin-top:34px"></div>
+      </div>
+      <div>
+        <div class="next-box">
+          <h3 style="color:#fff;font-size:26px">Цінність проєкту</h3>
+          <p>CI/CD перетворює реліз із ручної операції на керований, повторюваний і вимірюваний процес.</p>
+        </div>
+        <div class="next-box">
+          <h3 style="color:#fff;font-size:26px">Наступні кроки</h3>
+          <div class="next-row">
+            <div class="next-pill">MVP<span>базовий pipeline для команди</span></div>
+            <div class="next-pill">Rollback<span>безпечне повернення версій</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Роговий Сергій · КН-924б · НТУ «ХПІ»</span><span class="page">7 / 7</span></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+  
